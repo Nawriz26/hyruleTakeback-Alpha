@@ -314,6 +314,8 @@ MonoBehaviour:
   slashEffectPrefab: {fileID: 0}
   slashOffset: {x: 0, y: 0, z: 0}
   slashLifetime: 0.25
+  jump: {fileID: 8300000, guid: 9267227be0647324ab52f082f6448660, type: 3}
+  attackSound: {fileID: 8300000, guid: 88ada2d2220423a41924ca8da270029e, type: 3}
 --- !u!114 &86705758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1122,6 +1124,7 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420033}
   - component: {fileID: 519420034}
+  - component: {fileID: 519420035}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1234,6 +1237,22 @@ MonoBehaviour:
   maxX: 30
   minY: -5
   maxY: 10
+--- !u!114 &519420035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5ae9f84a2f1ee94eb51755d9179d948, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MusicManager
+  backgroundMusic: {fileID: 8300000, guid: 5ddb12fc16d146c4cbe205aaf15b49ff, type: 3}
+  volume: 0.5
+  loop: 1
+  playOnStart: 1
 --- !u!1 &536793427
 GameObject:
   m_ObjectHideFlags: 0
@@ -2534,7 +2553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Gem
   pointValue: 100
-  collectSound: {fileID: 0}
+  collectSound: {fileID: 8300000, guid: 0f97864d84476bf438df6c00f6828459, type: 3}
 --- !u!58 &1074496857
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3281,7 +3300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Gem
   pointValue: 100
-  collectSound: {fileID: 0}
+  collectSound: {fileID: 8300000, guid: 0f97864d84476bf438df6c00f6828459, type: 3}
 --- !u!58 &1228618981
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3843,6 +3862,8 @@ MonoBehaviour:
   leftPoint: {fileID: 0}
   rightPoint: {fileID: 0}
   maxHP: 3
+  hitSound: {fileID: 8300000, guid: 94fa8c693ca6ad74f8b61844c127954a, type: 3}
+  deathSound: {fileID: 8300000, guid: 53cf1502ff81494449d73bb8537b7f6c, type: 3}
 --- !u!1 &1338902961
 GameObject:
   m_ObjectHideFlags: 0
@@ -4419,7 +4440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Gem
   pointValue: 100
-  collectSound: {fileID: 0}
+  collectSound: {fileID: 8300000, guid: 0f97864d84476bf438df6c00f6828459, type: 3}
 --- !u!58 &1582981563
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4975,7 +4996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Gem
   pointValue: 100
-  collectSound: {fileID: 0}
+  collectSound: {fileID: 8300000, guid: 0f97864d84476bf438df6c00f6828459, type: 3}
 --- !u!58 &2062743570
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5096,7 +5117,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 4208424ad86b2e942b495d012a719e1d, type: 3}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

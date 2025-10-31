@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Audio")]
     [SerializeField] private AudioClip jump;
+    [SerializeField] private AudioClip attackSound;
     private AudioSource audioSource;
 
     private Rigidbody2D rb;
@@ -121,6 +122,12 @@ public class PlayerController : MonoBehaviour
     private IEnumerator DoAttack()
     {
         canAttack = false;
+
+        // Play attack sound
+        if (attackSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(attackSound);
+        }
 
         // --- VFX / DEBUG ---
         if (showAttackDebug) StartCoroutine(FlashAttackArea());

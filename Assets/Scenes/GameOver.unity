@@ -1003,6 +1003,7 @@ GameObject:
   - component: {fileID: 1261385626}
   - component: {fileID: 1261385625}
   - component: {fileID: 1261385624}
+  - component: {fileID: 1261385627}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1084,6 +1085,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1261385627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261385623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5ae9f84a2f1ee94eb51755d9179d948, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MusicManager
+  backgroundMusic: {fileID: 8300000, guid: c297746dae6d6864a9cb150569aa13a9, type: 3}
+  volume: 0.5
+  loop: 0
+  playOnStart: 1
 --- !u!1 &1543435108
 GameObject:
   m_ObjectHideFlags: 0
