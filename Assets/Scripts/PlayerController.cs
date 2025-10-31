@@ -33,6 +33,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Vector3 slashOffset = Vector3.zero;
     [SerializeField] private float slashLifetime = 0.25f;
 
+
+    [Header("Audio")]
+    [SerializeField] private AudioClip jump;
+    private AudioSource audioSource;
+
     private Rigidbody2D rb;
     private bool facingRight = true;
     private bool canAttack = true;
@@ -46,6 +51,10 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+            audioSource = gameObject.AddComponent<AudioSource>();
     }
 
     private void OnEnable()
@@ -86,6 +95,9 @@ public class PlayerController : MonoBehaviour
         if (requestJump && IsGrounded())
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+        if (jump !=  null) 
+                audioSource.PlayOneShot(jump);
+        
         }
         requestJump = false;
 

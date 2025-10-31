@@ -6,7 +6,7 @@ public class Gem : MonoBehaviour
 
     [SerializeField] private int pointValue = 100;
     [SerializeField] private AudioClip collectSound;
-
+    
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("Player"))

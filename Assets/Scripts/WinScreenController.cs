@@ -11,6 +11,8 @@ public class WinScreenController : MonoBehaviour
     [SerializeField] private Button continueButton;
     [SerializeField] private Button mainMenuButton;
     [SerializeField] private string nextLevelScene;
+    [SerializeField] private AudioClip victory;
+     private AudioSource audioSource;
 
     private void Start()
     {
@@ -31,6 +33,13 @@ public class WinScreenController : MonoBehaviour
         }
 
         if (mainMenuButton) mainMenuButton.onClick.AddListener(OnMainMenu);
+  
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource != null ) 
+           audioSource = gameObject.AddComponent<AudioSource>();
+
+        if (victory != null )
+            audioSource.PlayOneShot(victory);
     }
 
     private void OnContinue()
